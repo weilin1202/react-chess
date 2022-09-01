@@ -40,7 +40,7 @@ export async function initGame(gameRefFb) {
                 const game = gameDoc.data()
                 const { pendingPromotion, gameData, ...restOfGame } = game
                 member = game.members.find(m => m.uid === currentUser.uid)
-                const oponent = game.members.find(m => m.uid !== currentUser.uid)
+                const opponent = game.members.find(m => m.uid !== currentUser.uid)
                 if (gameData) {
                     chess.load(gameData)
                 }
@@ -50,8 +50,9 @@ export async function initGame(gameRefFb) {
                     pendingPromotion,
                     isGameOver,
                     position: member.piece,
+                    turn: chess.turn(),
                     member,
-                    oponent,
+                    opponent,
                     result: isGameOver ? getGameResult() : null,
                     ...restOfGame
                 }

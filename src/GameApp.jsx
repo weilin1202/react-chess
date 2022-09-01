@@ -5,6 +5,7 @@ import Board from './Board'
 import { useParams, useNavigate } from 'react-router-dom'
 import { db } from './firebase'
 
+
 function GameApp() {
   const [board, setBoard] = useState([])
   const [isGameOver, setIsGameOver] = useState()
@@ -75,7 +76,13 @@ function GameApp() {
         <Board board={board} position={position} />
         {game.member && game.member.name && <span className="tag is-link">{game.member.name}</span>}
       
-        
+      </div>
+
+      <div className= "game-turn"> 
+      <h2> Turn </h2>
+      <div id="current-turn-box" style ={{backgroundColor: game.turn === 'w'? 'white' : 'black'}}>
+      </div>
+    
       </div>
       {result && <p className="vertical-text">{result}</p>}
       {status === 'waiting' && (
