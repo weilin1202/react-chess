@@ -78,6 +78,7 @@ function GameApp() {
       
       </div>
 
+
       <div className= "game-turn"> 
       <h2> Turn </h2>
       <div id="current-turn-box" style ={{backgroundColor: game.turn === 'w'? 'white' : 'black'}}>
