@@ -9,6 +9,7 @@ export default function UserForm() {
         await auth.signInAnonymously()
     }
     return (
+        
         <form className="user-form" onSubmit={handleSubmit}>
             <h1>Enter your name to start</h1>
             <br />
