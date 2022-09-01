@@ -19,12 +19,21 @@
 
 .home {
     min-height: 100vh;
+    background-color: #594111;
 }
 
 .home-columns {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.home-columns h1 {
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    text-decoration: underline;
+    text-decoration-style: solid;
 }
 
 .pointer {
@@ -121,4 +130,19 @@
   
   h2{
     margin-bottom: 5px;
+  }
+
+  .button {
+    font-size: medium;
+    padding: 40px 80px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    position: absolute;
+    background-color: burlywood;
+    top: 50%;
+  }
+
+  .button:hover {
+    background-color: #B59963;
+    color: antiquewhite;
   }

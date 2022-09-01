@@ -35,18 +35,14 @@ export default function Home() {
 
     return (
         <>
-            <div className="columns home">
-                <div className="column has-background-primary home-columns">
-                    <button className="button is-link">
-                        Play Locally
-                    </button>
-                </div>
-                <div className="column has-background-link home-columns">
-                    <button className="button is-primary"
+            <div className="home">
+                <div className="home-columns">
+                    <h1>Queen's Gambit</h1>
+                    <button className='button'
                         onClick={handlePlayOnline}>
                         Play Online
                     </button>
-                </div>
+                </div> 
             </div>
             <div className={`modal ${showModal ? 'is-active' : ''}`}>
                 <div className="modal-background"></div>
